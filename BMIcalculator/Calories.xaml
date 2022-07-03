@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BMIcalculator.Calories">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                   
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Label VerticalTextAlignment="Center" Grid.Row="0" Grid.ColumnSpan="2" Text="Kalkulator BMR / dnevni unos kalorija " HorizontalTextAlignment="Center" FontSize="20"/>
+                <Label Grid.Row="1" Grid.Column="0" Text="Vaš BMI je:" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="18"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="Vaš BMR je:" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="18"/>
+                <Frame Margin="10,0,0,0" Grid.Row="2" Grid.Column="0" BackgroundColor="LightPink" CornerRadius="3">
+                    <Label x:Name="BMI" Text="" HorizontalTextAlignment="Center" FontSize="20"/>
+                </Frame>
+                <Frame  Margin="0,0,10,0" Grid.Row="2" Grid.Column="1" BackgroundColor="LightPink">
+                    <Label x:Name="BMR" Text="" HorizontalTextAlignment="Center" FontSize="20"/>
+                </Frame>
+
+
+                <Label Margin="0,15,0,15" Grid.Row="3" Grid.ColumnSpan="2" Text="Koliko se bavite fizičkom aktivnošću " HorizontalTextAlignment="Center" FontSize="20"/>
+            </Grid>
+            
+            <Picker x:Name="picker" Title="Odaberite aktivnost" TitleColor="LightPink" WidthRequest="100" HorizontalTextAlignment="Center" Margin="0,0,0,10">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Malo ili nimalo vježbanja</x:String>
+                        <x:String>Lagana tjelovježba / sport 1-3 dana u sedmici</x:String>
+                        <x:String>Umjerena tjelovježba / sport 3-5 dana u sedmici</x:String>
+                        <x:String>Žestoko vježbanje / sport 6-7 dana u sedmici</x:String>
+                        <x:String>vrlo teška vježba / sportski i fizički posao ili 2x trening</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Button x:Name="Calculate" Text="Izračunaj" HorizontalOptions="Center" BackgroundColor="LightPink" CornerRadius="30" Clicked="Calculate_Clicked" Margin="0,0,0,10"/>
+            <Label x:Name="show" Text="Vaš dnevni unos kalorija je:" HorizontalOptions="Center" FontSize="24" IsVisible="false"/>
+            <Frame x:Name="frameshow" BackgroundColor="White" HasShadow="False" CornerRadius="7" Margin="15,15,15,0" HorizontalOptions="Center" WidthRequest="150" HeightRequest="65" >
+                <Label x:Name="activityBMR" Text="" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="30"/>
+            </Frame>
+            <Button x:Name="Food" VerticalOptions="EndAndExpand" Margin="0,0,0,20" Text="Kalorije u hrani" HorizontalOptions="Center" BackgroundColor="LightPink" CornerRadius="30" Clicked="Food_Clicked" HeightRequest="60" WidthRequest="180"/>
+            
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "z2BQhgxK5BWVd/QKnOFT9FRxtO3Ll6cpOnDIMv+cobgQHXvArbBDxHxoU9L6bKZZaqwOeMFU8WR8Hzj/VDx69Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Marko\\source\\repos\\BMIcalculator\\BMIcalculator\\BMIcalculator\\BMIcalculator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Marko\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Marko\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Marko\\.nuget\\packages\\syncfusion.licensing\\19.1.0.69\\syncfusion.licensing.19.1.0.69.nupkg.sha512",
+    "C:\\Users\\Marko\\.nuget\\packages\\syncfusion.xamarin.core\\19.1.0.69\\syncfusion.xamarin.core.19.1.0.69.nupkg.sha512",
+    "C:\\Users\\Marko\\.nuget\\packages\\syncfusion.xamarin.sfgauge\\19.1.0.69\\syncfusion.xamarin.sfgauge.19.1.0.69.nupkg.sha512",
+    "C:\\Users\\Marko\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
+  ],
+  "logs": []
+}

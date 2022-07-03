@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BMIcalculator.Calculator"
+             xmlns:gauge="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <ImageButton Grid.Row="0" Grid.Column="0" x:Name="Nazad" Clicked="Nazad_Clicked" Source="back.png" BackgroundColor="Transparent" HeightRequest="4" WidthRequest="5" Margin="0,5,80,5"/>
+                <Label Grid.Row="0" Grid.ColumnSpan="3" Text="Izračunajte Vaš BMI" HorizontalTextAlignment="Center" FontSize="23" TextColor="Black" BackgroundColor="Transparent" Margin="50,0,0,0" HorizontalOptions="Center"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="Unesite godine:" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                <Entry Grid.Row="2" Grid.Column="1" x:Name="Age" HorizontalTextAlignment="Center" FontAttributes="Italic" TextColor="Gray"/>
+                <Label Grid.Row="1" Grid.Column="0" Text="Unesite težinu:" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                <Entry Grid.Row="2" Grid.Column="0" x:Name="Weight" HorizontalTextAlignment="Center" FontAttributes="Italic" TextColor="Gray"/>
+                <Label Grid.Row="3" Grid.Column="0" Text="kg" VerticalTextAlignment="Start" HorizontalTextAlignment="Center"/>
+                <Label Grid.Row="1" Grid.Column="2" Text="Unesite Visinu:" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                <Entry Grid.Row="2" Grid.Column="2" x:Name="Height" HorizontalTextAlignment="Center" FontAttributes="Italic" TextColor="Gray"/>
+                <Label Grid.Row="3" Grid.Column="2" Text="cm" VerticalTextAlignment="Start" HorizontalTextAlignment="Center"/>
+                <Button Grid.Row="4" Grid.Column="1" BackgroundColor="LightPink" CornerRadius="30" x:Name="BMI" Clicked="BMI_Clicked" Text=" Vaš BMI"/>
+                <Button Grid.Row="4" Grid.Column="0" BackgroundColor="LightPink" CornerRadius="30" x:Name="Back" Clicked="Back_Clicked" Text="Početna"/>
+                <Button Grid.Row="4" Grid.Column="2" BackgroundColor="LightPink" CornerRadius="30" x:Name="Reset" Clicked="Reset_Clicked" Text="Reset"/>
+            </Grid>
+            <StackLayout>
+                <gauge:SfCircularGauge IsCenterAligned="True" CircularCoefficient="0.8">
+                    <gauge:SfCircularGauge.Headers>
+                        <gauge:Header Text="BMI" ForegroundColor="Black" Position="0.5,0.2" TextSize="20" />
+                    </gauge:SfCircularGauge.Headers>
+                    <gauge:SfCircularGauge.Scales>
+                        <gauge:Scale  LabelColor= "Black" LabelOffset="0.95" LabelFontSize="12" UseRangeColorForLabels="True" FontAttributes="Bold" 
+                                      StartValue="16.0" EndValue="40.0" RadiusFactor="1" RimThickness="20" RimColor="LightPink" StartAngle="180" 
+                                      SweepAngle="180" EnableAutoInterval="True">
+                            <gauge:Scale.Pointers>
+                                <gauge:NeedlePointer  Value="14" x:Name="pointer" LengthFactor="0.89" Thickness="5"/>
+                            </gauge:Scale.Pointers>
+                           
+                            <gauge:Scale.Ranges>
+                                <gauge:Range StartValue="16.0" EndValue="18.5" Color="LightSteelBlue" Offset="0.9" />
+                                <gauge:Range StartValue="18.5" EndValue="25" Color="Green" Offset="0.9"/>
+                                <gauge:Range StartValue="25" EndValue="40" Color="red" Offset="0.9"/>
+                            </gauge:Scale.Ranges>
+                        </gauge:Scale>
+                    </gauge:SfCircularGauge.Scales>
+                </gauge:SfCircularGauge>
+            </StackLayout>
+            <Label x:Name="labelBMI" Text="" HorizontalTextAlignment="Center" FontSize="20" />
+            <Label x:Name="description" Text="" HorizontalTextAlignment="Center" FontSize="15"/>
+            <Button x:Name="Calories" Clicked="Calories_Clicked" Text="Unos dnevnih kalorija" HorizontalOptions="Center" BackgroundColor="LightPink" CornerRadius="30" Margin="0,0,0,0"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

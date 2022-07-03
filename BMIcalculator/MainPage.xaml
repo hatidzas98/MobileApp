@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BMIcalculator.MainPage">
+
+    <StackLayout Padding="10">
+        <Image Source="logo.jpg" Margin="0,0,0,30"/>
+        <ImageButton Source="BMI.jpg" Clicked="calculator_Clicked" CornerRadius="7" BorderColor="Black" BorderWidth="1"/>
+        <ImageButton x:Name="Calories" Source="calories.jpg" Clicked="Calories_Clicked" CornerRadius="7" BorderColor="Black" BorderWidth="1"/>
+        <ImageButton x:Name="manual" Source="manual.jpg" Clicked="Manual_Clicked" CornerRadius="7" BorderColor="Black" BorderWidth="1"/>
+    </StackLayout>
+
+</ContentPage>
